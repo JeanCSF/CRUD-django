@@ -1,0 +1,41 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>CRUD Django</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+</head>
+
+<body>
+    <header>
+    </header>
+    <main class="content">
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nome Completo</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pessoa in pessoas %}
+                <tr>
+                    <td scope="row">{{pessoa.id}}</td>
+                    <td scope="row">{{pessoa.nome}}</td>
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+    </main>
+    <footer class="footer">
+        <p>&copy;2023</p>
+    </footer>
+</body>
+
+</html>
